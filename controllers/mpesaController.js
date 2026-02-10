@@ -126,13 +126,16 @@ const stkpush = async (req, res) => {
   }
 };
 const callback = (req, res) => {
-  console.log("Callback received:", req.body);
-  res.json({ status: "success", message: "Callback received" });
+  console.log("📞 CALLBACK RECEIVED:");
+  console.log(JSON.stringify(req.body, null, 2));
+
+  res.json({ ResultCode: 0, ResultDesc: "Accepted" });
 };
 
 
 module.exports = {
   generatepassword,
   token,
-  stkpush
+  stkpush,
+  callback
 };

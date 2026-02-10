@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const testSTK = async () => {
   try {
-    const response = await axios.post("http://localhost:5000/mpesa/stkpush", {
+    const response = await axios.post("http://127.0.0.1:5000/mpesa/callback", {
       phone: "254115995080", 
       amount: 1
     });
